@@ -1,0 +1,24 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}{%endblock%}
+{%block title %}Appointment{%endblock%}
+{%block body%}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <form action="{% url 'appointment:new_appointment'%}" method="post" novalidate>
+                {% csrf_token %}
+                {{form.as_p}}
+                <input type="submit" class="btn btn-info">
+            </form>
+        </div>
+    </div>
+</div>
+
+{%endblock%}
+
+{%block script%}
+        {{super.block}}
+    {%endblock%}
