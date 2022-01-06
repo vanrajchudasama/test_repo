@@ -2,7 +2,7 @@ from rest_framework import serializers
 from audio_player.models import Audio
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
-# heloo
+
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
